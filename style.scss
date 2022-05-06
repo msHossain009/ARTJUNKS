@@ -1,0 +1,119 @@
+@import "variables";
+@import "mixin";
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 480px) {
+  * {
+    @include basics;
+  }
+  .heading {
+    background-image: url(./Images/Background.png);
+    background-size: cover;
+    height: 150vh;
+    .navigation {
+      height: 30vh;
+      .nav1 {
+        height: 10vh;
+        .logo {
+          @include headings(32px, 37px, 1000) padding: 5px;
+        }
+        .menu {
+          height: 70px;
+          width: 80px;
+        }
+      }
+      .nav2 {
+        display: none;
+        opacity: 0;
+      }
+    }
+    .hero {
+      height: 90vh;
+      h1 {
+        @include headings(55px, 62px, 600);
+        padding-right: 150px;
+      }
+      p {
+        @include paragraphs(18px, 30px);
+      }
+      button {
+        @include button;
+      }
+    }
+    .hero::before {
+      content: "";
+      display: inline-block;
+      width: 100px;
+      border: 8px solid $white;
+    }
+  }
+  footer {
+    height: 100vh;
+    h1 {
+      @include title(24px, 29px);
+    }
+    .cardImg1 {
+      @include cardImage background-image: url(./Images/card1.png);
+    }
+    .cardImg2 {
+      @include cardImage background-image: url(./Images/card2.png);
+    }
+    .cardImg3 {
+      @include cardImage background-image: url(./Images/card3.png);
+    }
+    .card-body {
+      .cardText {
+        @include date;
+      }
+      .cardTitle {
+        @include title(20px, 24px);
+      }
+      .cardText2 {
+        @include details;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  * {
+    @include basics;
+  }
+  .heading {
+    padding-left: 50px;
+    .navigation {
+      .nav2 {
+        opacity: 1;
+        height: 10vh;
+        .logo {
+          @include headings(32px, 55px, 1000);
+          padding: 5px;
+        }
+        ul {
+          li {
+            a {
+              @include paragraphs(15px, 40px);
+            }
+          }
+        }
+        button {
+          @include button;
+        }
+      }
+    }
+    .nav1 {
+      display: none;
+    }
+  }
+}
+footer {
+  height: 110vh;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  * {
+    @include basics;
+  }
+}

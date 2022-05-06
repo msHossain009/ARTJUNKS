@@ -1,0 +1,81 @@
+@mixin basics {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: visible;
+  text-decoration: none !important;
+  list-style-type: none;
+  border: none;
+  outline: none;
+}
+
+@mixin headings($fontSize, $lineHeight, $fontWeight) {
+  font-family: "Libre Caslon Display";
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $white;
+}
+
+@mixin paragraphs($fontSize, $lineHeight) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: 0em;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $white;
+}
+
+@mixin button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  padding: 10px 30px;
+  border: 2px solid $white;
+  border-radius: 10px;
+  color: $white;
+  background-color: transparent;
+}
+
+@mixin cardImage {
+  height: 400px;
+  border-radius: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin date {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: $gray;
+}
+
+@mixin title($fontSize, $lineHeight) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $black;
+}
+
+@mixin details {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: $orange;
+  text-align: right;
+}
